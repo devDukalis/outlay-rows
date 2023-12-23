@@ -79,9 +79,9 @@ while true; do
     1)
         touch "index.tsx"
 
-        echo -e "export const ${componentTitle^} = () => {
+        echo -e "export function ${componentTitle^}() {
   return <p className=\"test\">${componentTitle^}</p>;
-};" >>index.tsx
+}" >>index.tsx
         break
         ;;
 
@@ -90,9 +90,9 @@ while true; do
         touch "index.tsx"
         echo -e "import \"./style.css\";
 
-export const ${componentTitle^} = () => {
+export function ${componentTitle^}() {
   return <p className=\"test\">${componentTitle^}</p>;
-};" >>index.tsx
+}" >>index.tsx
 
         touch "style.css"
         echo -e ".test {
@@ -106,9 +106,9 @@ export const ${componentTitle^} = () => {
         touch "index.tsx"
         echo -e "import classes from \"./style.module.css\";
 
-export const ${componentTitle^} = () => {
+export function ${componentTitle^}() {
   return <p className={classes.test}>${componentTitle^}</p>;
-};" >>index.tsx
+}" >>index.tsx
 
         touch "style.module.css"
         echo -e ".test {
