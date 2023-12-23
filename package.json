@@ -19,8 +19,11 @@
     "lint-staged:run": "lint-staged"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.0.4",
+    "redux-persist": "^6.0.0",
     "sass": "^1.69.5"
   },
   "devDependencies": {
@@ -47,6 +50,7 @@
     "typescript": "^5.0.2",
     "vite": "^4.5.1",
     "vite-plugin-checker": "^0.6.2",
+    "vite-plugin-svgr": "^4.2.0",
     "vite-tsconfig-paths": "^4.2.1"
   }
 }
