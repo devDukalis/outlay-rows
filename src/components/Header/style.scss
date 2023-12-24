@@ -1,0 +1,48 @@
+@import "src/scss/variables.scss";
+
+.header {
+  line-height: 16px;
+  text-decoration: none;
+  border-bottom: 1px solid $borderColor--primary;
+
+  .nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin: 0 20px;
+    padding: 10px 0;
+  }
+
+  .link {
+    color: $color--secondary;
+    text-decoration: none;
+  }
+
+  .activeLink {
+    position: relative;
+    text-decoration: none;
+    color: $linkColor--active;
+  }
+
+  .activeLink:after {
+    position: absolute;
+    content: "";
+    bottom: -14px;
+    left: -4px;
+    width: 110%;
+    border-bottom: 2px solid $borderColor-link--active;
+  }
+}
+
+.menuIcon {
+  width: $iconWidth;
+  height: $iconHeight;
+  cursor: pointer;
+}
+
+.backIcon {
+  width: $iconWidth;
+  height: $iconHeight;
+  cursor: pointer;
+}

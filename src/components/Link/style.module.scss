@@ -1,0 +1,19 @@
+.link {
+  color: #a1a1aa;
+  text-decoration: none;
+}
+
+.activeLink {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.activeLink:after {
+  position: absolute;
+  content: "";
+  bottom: -14px;
+  left: -4px;
+  width: 110%;
+  border-bottom: 2px solid #ffffff;
+}

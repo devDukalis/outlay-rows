@@ -1,3 +1,12 @@
+import { Header } from "@/components/Header";
+
+import { Router } from "@/router";
+
 export function App() {
-  return <h1>СМР</h1>;
+  return (
+    <>
+      <Header />
+      <Router />
+    </>
+  );
 }
