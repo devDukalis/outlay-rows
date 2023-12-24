@@ -1,0 +1,23 @@
+@import "src/scss/variables.scss";
+
+.navContainer {
+  padding: 8px 22px;
+  margin-left: -22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  align-items: center;
+}
+
+.navContainer:has(.activeLink) {
+  background-color: $linkColor;
+}
+
+.navContainer > .link {
+  color: $linkColor--active;
+}
+
+.projectIcon {
+  width: $iconWidth;
+  height: $iconHeight;
+}

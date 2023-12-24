@@ -1,16 +1,24 @@
-import classes from "@/components/Link/style.module.scss";
+import { NavLink } from "react-router-dom";
+
+import "@/components/Link/style.scss";
 
 interface Props {
-  href: string;
-  children?: React.ReactNode;
+  title?: string;
+  linkTo: string;
+  style?: React.CSSProperties;
+  isDecorated?: boolean;
 }
 
-const Link: React.FC<Props> = ({ href, children }) => {
-  return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={classes.activeLink}>
-      {children}
-    </a>
-  );
-};
+export function Link({ title = "MyLink", linkTo, style, isDecorated = true }: Props) {
+  const activeLinkClassName = (props: { isActive: boolean }) => {
+    const baseClassName = props.isActive ? "activeLink" : "link";
 
-export default Link;
+    return isDecorated ? `${baseClassName} decoratedLink` : baseClassName;
+  };
+
+  return (
+    <NavLink to={linkTo} className={activeLinkClassName} style={style}>
+      {title}
+    </NavLink>
+  );
+}

@@ -1,6 +1,8 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import MainMenu from "../../assets/icons/menu.svg?react";
+import { Link } from "@/components/Link";
+
+import Menu from "../../assets/icons/menu.svg?react";
 import Back from "../../assets/icons/back.svg?react";
 
 import "@/components/Header/style.scss";
@@ -8,29 +10,22 @@ import "@/components/Header/style.scss";
 export function Header() {
   const navigate = useNavigate();
 
-  const handleClickRoot = (event: React.FormEvent) => {
-    event.preventDefault();
+  const handleClickRoot = () => {
     navigate("/");
   };
 
-  const handleClickBack = (event: React.FormEvent) => {
-    event.preventDefault();
+  const handleClickBack = () => {
     navigate(-1);
   };
 
   return (
     <header className="header">
       <nav className="nav">
-        <MainMenu onClick={handleClickRoot} className="menuIcon" />
+        <Menu onClick={handleClickRoot} className="menuIcon" />
         <Back onClick={handleClickBack} className="backIcon" />
 
-        <NavLink to="/view" className={({ isActive }) => (isActive ? "activeLink" : "link")}>
-          Просмотр
-        </NavLink>
-
-        <NavLink to="/management" className={({ isActive }) => (isActive ? "activeLink" : "link")}>
-          Управление
-        </NavLink>
+        <Link linkTo="/view" title="Просмотр" style={{ marginRight: "8px" }} />
+        <Link linkTo="/management" title="Управление" />
       </nav>
     </header>
   );

@@ -1,0 +1,8 @@
+@import "src/scss/variables.scss";
+
+.divider {
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid $borderColor--primary;
+  margin-left: -22px;
+}

@@ -1,0 +1,10 @@
+@import "src/scss/variables.scss";
+
+.aside {
+  width: 234px;
+  line-height: 16px;
+  color: $color--secondary;
+  height: calc(100vh - 45px);
+  border-right: 1px solid $borderColor--primary;
+  margin: 0 20px;
+}
