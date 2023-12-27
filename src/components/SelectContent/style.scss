@@ -1,18 +1,18 @@
 @import "src/scss/variables.scss";
 
-.asideSelect {
+.aside-select {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   height: 44px;
 
-  .selectSubtitle {
+  .select-subtitle {
     font-size: $font-size--small;
     line-height: normal;
   }
 
-  .selectArrow {
+  .select-arrow {
     width: $iconWidth;
     height: $iconHeight;
     margin-right: 10px;

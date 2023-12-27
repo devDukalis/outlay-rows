@@ -5,13 +5,13 @@
   text-decoration: none;
 }
 
-.activeLink {
+.active-link {
   position: relative;
   text-decoration: none;
   color: $linkColor--active;
 }
 
-.decoratedLink:after {
+.decorated-link:after {
   position: absolute;
   content: "";
   bottom: -14px;

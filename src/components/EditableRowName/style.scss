@@ -1,0 +1,21 @@
+@import "src/scss/variables.scss";
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.table-workName {
+  flex: 170;
+  width: 100%;
+}
+
+.input {
+  border: 1px solid $borderColor--primary;
+  border-radius: 6px;
+  background-color: $bg-color--secondary;
+  letter-spacing: 0.1px;
+  color: $inputColor;
+  padding: 10px;
+}

@@ -1,0 +1,6 @@
+@for $i from 0 through 6 {
+  .table-img#{$i} {
+    height: 16px;
+    margin-left: 16px * $i;
+  }
+}

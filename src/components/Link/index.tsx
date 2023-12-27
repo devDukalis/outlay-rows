@@ -9,11 +9,11 @@ interface Props {
   isDecorated?: boolean;
 }
 
-export function Link({ title = "MyLink", linkTo, style, isDecorated = true }: Props) {
+export function Link({ title = "MyLink", linkTo, style, isDecorated = false }: Props) {
   const activeLinkClassName = (props: { isActive: boolean }) => {
-    const baseClassName = props.isActive ? "activeLink" : "link";
+    const baseClassName = props.isActive ? "active-link" : "link";
 
-    return isDecorated ? `${baseClassName} decoratedLink` : baseClassName;
+    return isDecorated ? `${baseClassName} decorated-link` : baseClassName;
   };
 
   return (

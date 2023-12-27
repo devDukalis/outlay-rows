@@ -9,13 +9,13 @@ interface Props {
 
 export function SelectContent({ title = "Название проекта", subtitle = "Аббревиатура" }: Props) {
   return (
-    <div className="asideSelect">
-      <div className="selectContent">
-        <div className="selectTitle">{title}</div>
-        <div className="selectSubtitle">{subtitle}</div>
+    <div className="aside-select">
+      <div className="select-content">
+        <div className="select-title">{title}</div>
+        <div className="select-subtitle">{subtitle}</div>
       </div>
 
-      <ArrowDownIcon className="selectArrow" />
+      <ArrowDownIcon className="select-arrow" />
     </div>
   );
 }

@@ -1,0 +1,8 @@
+@import "src/scss/variables.scss";
+
+.table {
+  width: 100%;
+  height: 100vh;
+  background: $bg-color--secondary;
+  margin-left: -20px;
+}

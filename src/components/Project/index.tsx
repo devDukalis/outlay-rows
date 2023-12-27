@@ -11,8 +11,8 @@ interface Props {
 
 export function Project({ title, link }: Props) {
   return (
-    <div className="navContainer">
-      <ProjectIcon className="projectIcon" />
+    <div className="nav-container">
+      <ProjectIcon className="project-icon" />
 
       <Link linkTo={link} title={title} isDecorated={false} />
     </div>

@@ -1,6 +1,6 @@
 @import "src/scss/variables.scss";
 
-.navContainer {
+.nav-container {
   padding: 8px 22px;
   margin-left: -22px;
   display: flex;
@@ -9,15 +9,15 @@
   align-items: center;
 }
 
-.navContainer:has(.activeLink) {
+.nav-container:has(.active-link) {
   background-color: $linkColor;
 }
 
-.navContainer > .link {
+.nav-container > .link {
   color: $linkColor--active;
 }
 
-.projectIcon {
+.project-icon {
   width: $iconWidth;
   height: $iconHeight;
 }
