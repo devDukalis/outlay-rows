@@ -89,11 +89,11 @@ export const fetchEntity = (isEmpty: boolean) => {
 export const fetchUpdateRow = (DATA: Row) => {
   return async (dispatch: AppDispatch) => {
     try {
-      const qwe = await axios.post<OutlayRowUpdateRequest>(
+      const response = await axios.post<OutlayRowUpdateRequest>(
         `/v1/outlay-rows/entity/${eID}/row/${DATA.id}/update`,
         DATA,
       );
-      dispatch(entitySlice.actions.rowUpdate(qwe.data.current));
+      dispatch(entitySlice.actions.rowUpdate(response.data.current));
     } catch (e) {
       handleError(dispatch, e as Error);
     }

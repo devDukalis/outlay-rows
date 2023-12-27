@@ -55,17 +55,17 @@ export const entitySlice = createSlice({
       state.rows = action.payload;
     },
     rowsNew(state, action: PayloadAction<Row>) {
-      for (let i = 0; i < state.rows.length; i++) {
-        if (state.rows[i].row.id === 0) {
-          state.rows[i].row = action.payload;
-        }
+      const rowIndex = state.rows.findIndex((row) => row.row.id === 0);
+
+      if (rowIndex !== -1) {
+        state.rows[rowIndex].row = action.payload;
       }
     },
     rowUpdate(state, action: PayloadAction<Row>) {
-      for (let i = 0; i < state.rows.length; i++) {
-        if (state.rows[i].row.id === action.payload.id) {
-          state.rows[i].row = action.payload;
-        }
+      const index = state.rows.findIndex((row) => row.row.id === action.payload.id);
+
+      if (index !== -1) {
+        state.rows[index].row = action.payload;
       }
     },
     deleteRow(state, action: PayloadAction<DeletePayload>) {
