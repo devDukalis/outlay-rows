@@ -8,14 +8,13 @@ input::-webkit-inner-spin-button {
 
 .table-workName {
   flex: 170;
-  width: 100%;
 }
 
 .input {
+  min-height: 36px;
   border: 1px solid $borderColor--primary;
   border-radius: 6px;
   background-color: $bg-color--secondary;
   letter-spacing: 0.1px;
   color: $inputColor;
-  padding: 10px;
 }

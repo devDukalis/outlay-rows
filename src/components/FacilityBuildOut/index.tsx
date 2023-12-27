@@ -119,6 +119,14 @@ export function FacilityBuildOut({
     />
   ));
 
+  const levelClassName = (level: number) => {
+    if (level >= 1 && level <= 4) {
+      return `table-level connection-line${level}`;
+    }
+
+    return "table-level";
+  };
+
   return (
     <>
       <div
@@ -126,7 +134,7 @@ export function FacilityBuildOut({
           rowIDToEdit !== rowsState.row.id ? `table-info level-${rowsState.level}` : "table-info "
         }
         onDoubleClick={() => handleDoubleClickRow(rowsState.row.id)}>
-        <div className="table-level">
+        <div className={levelClassName(rowsState.level)}>
           {!isOpenMode && !isEditMode && !rowsState.isNew ? (
             <div
               className={`table-level-container${row.level}`}
