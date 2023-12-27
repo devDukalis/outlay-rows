@@ -10,7 +10,7 @@ import { ImageIcon } from "@/components/ImageIcon";
 import deleteDocumentIcon from "@/assets/icons/deleteDocument.svg";
 import newDocumentIcon from "@/assets/icons/newDocument.svg";
 
-import { tempData } from "./temp-data";
+import { tempData } from "@/components/FacilityBuildOut/temp-data";
 
 import { Row, Rows } from "@/models";
 
