@@ -1,7 +1,9 @@
+import { lazy } from "react";
+
 import { Route, Routes } from "react-router-dom";
 
-import { NotFound } from "@/pages/NotFound";
-import { CMP } from "@/pages/CMP";
+const NotFound = lazy(() => import("@/pages/NotFound"));
+const CMP = lazy(() => import("@/pages/CMP"));
 
 export function Router() {
   return (

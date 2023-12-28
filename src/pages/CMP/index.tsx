@@ -14,7 +14,7 @@ import { Row, Rows } from "@/models";
 
 import "@/pages/CMP/style.scss";
 
-export function CMP() {
+export default function CMP() {
   const dispatch = useAppDispatch();
 
   const { error, loading, rows } = useAppSelector((state) => state.entities);

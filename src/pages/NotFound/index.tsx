@@ -1,6 +1,6 @@
 import classes from "@/pages/NotFound/style.module.scss";
 
-export function NotFound() {
+export default function NotFound() {
   return (
     <div className={classes.notFound}>
       <h1>404</h1>
